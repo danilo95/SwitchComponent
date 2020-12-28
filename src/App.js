@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Switch from './switch/Switch';
+
+import { Container, Label, Wrapper } from './Style';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	let defaultValue = true;
+	return (
+		<Wrapper>
+			<Container>
+				<Label>Do you love React?</Label>
+				<Switch id="switch-01" color="#7DE59A" value={defaultValue} />
+			</Container>
+			<Container>
+				<Label>Do you love Javascript?</Label>
+				<Switch id="switch-02" color="#09DEB7" value={defaultValue} />
+			</Container>
+		</Wrapper>
+	);
 }
 
 export default App;
